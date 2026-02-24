@@ -1,0 +1,138 @@
+begin
+dbms_output.put_line('Hello World!');
+end;
+/
+
+
+
+
+
+Declare
+
+	a int;
+	b int;
+	c int;
+	Begin	
+		a:=&a;
+		b:=&b;
+		c:=a+b;
+		dbms_output.put_line(c || ' is the sum of entered numbers');
+	End;
+/
+	
+
+
+
+
+Declare
+	a int;
+	b int;
+	c int;
+	s int;
+	v int;
+	Begin	
+		a:=&a;
+		b:=&b;
+		c:=&c;
+		s:=a+b+c;
+		v:=s/3;
+		dbms_output.put_line(s || ' is the sum of entered 3 numbers');
+		dbms_output.put_line(v || ' is the average of entered 3 numbers');
+	End;
+/
+
+
+
+
+Declare
+	l int;
+	b int;
+	a int;
+	p int;
+	Begin	
+		l:=&l;
+		b:=&b;
+		a:=l*b;
+		p:=2*(l+b);
+		dbms_output.put_line(a || ' is the area of entered rectangle');
+		dbms_output.put_line(p || ' is the perimeter of entered rectangle');
+	End;
+/
+
+
+
+
+Declare
+
+	a int;
+	Begin	
+		a:=&a;
+		if mod(a,2)=0 then
+			dbms_output.put_line(a || ' is even numbers');
+		else
+			dbms_output.put_line(a || ' is odd number');
+	end if;
+	End;
+/
+	
+
+
+
+
+Declare
+
+	a int;
+	b int;
+	Begin	
+		a:=&a;
+		b:=&b;
+		if(a>b) then
+			dbms_output.put_line(a || ' is the large numbers');
+		else
+			dbms_output.put_line(b || ' is the large number');
+	end if;
+	End;
+/
+
+
+
+
+
+Declare
+
+	a int;
+	b int;
+	c int;
+	Begin	
+		a:=&a;
+		b:=&b;
+		c:=&c;
+		if (a>b and a>c) then
+			dbms_output.put_line(a || ' is the large number');
+		elsif (b>a and b>c) then
+			dbms_output.put_line(b || ' is the large number');
+		else
+			dbms_output.put_line(c || ' is the large number');
+	end if;
+	End;
+/
+
+
+
+
+declare 
+	n int;
+	i int;
+	begin
+		n:=&n;
+		for i in 0..n
+		loop
+			if(mod(i,2)=0)then
+				dbms_output.put_line(i);
+			end if;
+		end loop;
+	end;
+/
+
+
+
