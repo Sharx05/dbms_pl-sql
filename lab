@@ -136,3 +136,22 @@ declare
 
 
 
+DECLARE
+    n int;
+    t int;
+    d int;
+    r NUMBER := 0;
+BEGIN
+    n := &n;        
+    temp := n;      
+
+    WHILE (temp > 0)
+    LOOP
+        d := MOD(temp, 10);
+        r := r * 10 + d;
+        temp := TRUNC(temp / 10);
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE(r || ' is the reverse of ' || n);
+END;
+/
